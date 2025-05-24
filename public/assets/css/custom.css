@@ -1,0 +1,101 @@
+/* Base body styling */
+body {
+    background-color: #f8f9fa;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Project card styling */
+.project-card {
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 12px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* Technology badge styling */
+.tech-badge {
+    background-color: #dee2e6;
+    color: #333;
+    font-size: 0.75rem;
+    margin-right: 0.3rem;
+    padding: 0.35em 0.6em;
+}
+
+/* Container for wallpaper and DP (display picture) */
+.wallpaper-dp-box {
+    position: relative;
+    margin-bottom: 90px;
+}
+
+/* Wallpaper background styling */
+.wallpaper-image {
+    height: 200px;
+    background: black url("{{ asset($wallpaper_image) }}") no-repeat center;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+/* DP image positioning and styling */
+.dp-image {
+    position: absolute;
+    bottom: -70px;
+    left: 30px;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Inner DP image sizing */
+.dp-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 30px;
+}
+
+/* Card title styling */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Custom button styling */
+.btn-dark {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.75rem;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    .wallpaper-image {
+        height: 100px;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .dp-image {
+        height: 70px;
+        width: 70px;
+        bottom: -35px;
+        left: 15px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+}
