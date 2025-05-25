@@ -29,7 +29,7 @@
 
         <!-- Section heading -->
         <h1 class="text-center section-title">
-            {{ $settings['github_showcase_heading_text'] ?? '🚀 GitHub Project Showcase' }}</h1>
+            {{ $settings['github_showcase_heading_text'] ?? '-----' }}</h1>
 
         <!-- Project Cards Section -->
         <div class="row g-4 mb-5">

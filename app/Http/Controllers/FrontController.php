@@ -19,6 +19,8 @@ class FrontController extends Controller
         // Fetch custom wallpaper and profile image paths from the settings table
         $settings = ResumeBuilderSettingsModel::where('key', 'LIKE', '%github_showcase_%')->pluck('value', 'key')->toArray();
 
+        $settings['github_showcase_footer_copyright_text'] = str_replace('{current_year}', date('Y'), $settings['github_showcase_footer_copyright_text']);
+
         if (isset($settings['github_showcase_wallpaper_image_path']) && !empty($settings['github_showcase_wallpaper_image_path'])) {
             $settings['github_showcase_wallpaper_image_path'] = env('RESUME_BASE_MEDIA_URL') . $settings['github_showcase_wallpaper_image_path'];
         }
