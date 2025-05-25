@@ -11,6 +11,15 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="{{ asset('assets') }}/css/custom.css">
+    <style>
+        /* Wallpaper background styling */
+        .wallpaper-image {
+            height: 200px;
+            background: black url("{{ asset($wallpaper_image) }}") no-repeat center;
+            background-size: cover;
+            border-radius: 12px;
+        }
+    </style>
 </head>
 
 <body>

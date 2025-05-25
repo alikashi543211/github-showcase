@@ -31,14 +31,6 @@ body {
     margin-bottom: 90px;
 }
 
-/* Wallpaper background styling */
-.wallpaper-image {
-    height: 200px;
-    background: black url("{{ asset($wallpaper_image) }}") no-repeat center;
-    background-size: cover;
-    border-radius: 12px;
-}
-
 /* DP image positioning and styling */
 .dp-image {
     position: absolute;
