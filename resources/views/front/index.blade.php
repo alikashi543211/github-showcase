@@ -15,7 +15,7 @@
         /* Wallpaper background styling */
         .wallpaper-image {
             height: 200px;
-            background: black url("{{ asset($wallpaper_image) }}") no-repeat center;
+            background: black url("{{ $wallpaper_image }}") no-repeat center;
             background-size: cover;
             border-radius: 12px;
         }
