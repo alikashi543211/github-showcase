@@ -49,16 +49,11 @@
 
                                 <!-- Technologies used badges -->
                                 <div class="mb-2">
-                                    @if (!empty($project->used_technologies) && is_array($project->used_technologies))
-                                        @foreach ($project->used_technologies as $tech)
-                                            <span class="badge tech-badge">{{ $tech }}</span>
+                                    @if (!empty($project->usedTechnologies))
+                                        @foreach ($project->usedTechnologies as $tech)
+                                            <span
+                                                class="badge tech-badge">{{ $tech->skill->skill_title ?? '-----' }}</span>
                                         @endforeach
-                                    @else
-                                        <!-- Default tech badges if none specified -->
-                                        <span class="badge tech-badge">PHP</span>
-                                        <span class="badge tech-badge">Laravel</span>
-                                        <span class="badge tech-badge">Bootstrap</span>
-                                        <span class="badge tech-badge">jQuery</span>
                                     @endif
                                 </div>
 
