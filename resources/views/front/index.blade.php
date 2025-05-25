@@ -15,7 +15,7 @@
         /* Wallpaper background styling */
         .wallpaper-image {
             height: 200px;
-            background: black url("{{ $wallpaper_image }}") no-repeat center;
+            background: black url("{{ $settings['github_showcase_wallpaper_image_path'] ?? '' }}") no-repeat center;
             background-size: cover;
             border-radius: 12px;
         }
@@ -28,7 +28,8 @@
         @include('front.includes.banner')
 
         <!-- Section heading -->
-        <h1 class="text-center section-title">🚀 GitHub Project Showcase</h1>
+        <h1 class="text-center section-title">
+            {{ $settings['github_showcase_heading_text'] ?? '🚀 GitHub Project Showcase' }}</h1>
 
         <!-- Project Cards Section -->
         <div class="row g-4 mb-5">
