@@ -12,7 +12,7 @@ class FrontController extends Controller
     public function index()
     {
         // Fetch all active GitHub projects from the database
-        $github_projects = ResumeGithubSectionsModel::whereIsActive(1)->get();
+        $github_projects = ResumeGithubSectionsModel::whereIsActive(1)->orderBy('sort_number', 'ASC')->get();
 
         // Default wallpaper and profile image paths (fallbacks)
 
